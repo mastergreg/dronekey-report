@@ -7,7 +7,7 @@ TEXFILES = $(wildcard *.tex)
 
 all: $(TARGET).pdf dist-clean wc
 
-%.pdf:	$(TEXFILES) title/*
+%.pdf:	$(TEXFILES) title/* files/* chapters/*
 	@$(CC) $(CCFLAGS) $(TARGET)
 	@$(CC) $(CCFLAGS) $(TARGET)
 
