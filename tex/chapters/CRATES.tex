@@ -1,1 +1,25 @@
 \section{CRATES}
+CRATES stands for "Cognitive Robotics Architecture for Tightly-Coupled
+Experiments and Simulation" [Site at bitbucket (andrew)]. Crates is a simulation
+framework for robot problems. It has two main goals, first to enable researchers
+to create high-level controllers for platforms in a simulated environment.
+Secondly CRATES aims to allow the transfer of these high-level controllers, in
+real life experiments. It uses the ROS backbone as a messaging system and
+provides a hardware abstraction layer (HAL) for the controllers. These
+controllers interract through the ROS backbone which is also supported on the
+real life platforms. As a result the same controllers that are used in
+simulation can interract through the HAL both with the simulation engine and the
+platforms. This provides a very helpful tool to researchers as no change is
+required in the controllers themselves.
+
+
+In order to provide the simulation environment, CRATES, makes use of the Gazebo
+physics engine. It provides OpenGL accelerated visualisation of the simulation
+in real time. The simulation is enriched with military wind models as well as
+with the GPS toolkit to simulate global navigation satelite systems.
+GeographicLib enables the projection between different coordinate frames. The
+engine is enriched with noise models for the measurements in each controller. In
+our project we aim to further extend CRATES and provide a radio model which can
+be used for communication between two objects within the simulation.
+
+
