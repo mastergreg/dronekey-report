@@ -3,12 +3,18 @@ NS2 is a discrete event simulator targeted at networking research. It interprets
 scripts of network events at distinct times. These are written in the tcl
 programming language in a plaintext file. NS2 has long been used in multiple
 research projects and it has a large enough code base. Within ns2 there are
-models for multiple network stacks and different mac layers which provide a
-distinct versatility.
+models for multiple network stacks. It provides support for wired and wireless
+networks, different mac layers which provide a distinct versatility. However, it
+also has distinct limitations with regard to dynamic window advertisement and
+explicit congestion notification. Regardless it is a well known research
+standard network simulator.
 
+NS2 is by default a non interactive simulator. It parses the events script
+beforehand and executes them at runtime. This is also one of it's limitations,
+it is unable by default to handle dynamic topologies. Moreover it does not
+support wireless simulation in the 3-dimensional space. The radio model used for
+the propagation of the signal within ns2 is a flat rectangular area.
 
-
-NS2 is by default a non interactive simulator. It parses the events script beforehand
-and executes them at runtime. For our project we attempt to use it as an
-interactive simulator, keeping it in sync with the environment simulator.
+For our project we attempt to use it as an interactive simulator, keeping it in
+sync with the environment simulator.
 
